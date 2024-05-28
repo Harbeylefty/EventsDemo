@@ -13,8 +13,6 @@ on:
       - main  #main
       - 'dev-*'  #dev-new dev-branch
       - 'feat/**'  #feat/new feat/new/branch
-    paths:
-      - '.github/workflows/*'
 jobs:
   deploy:
     runs-on: ubuntu-latest
