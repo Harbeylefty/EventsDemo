@@ -4,15 +4,13 @@ on:
     types:
       - opened
     branches:
-      - main  #main
-      - 'dev-*'  #dev-new dev-branch
-      - 'feat/**' #feat/branch
+      - dev   #dev-new dev-branch
   workflow_dispatch:
   push:
     branches: 
-      - main  #main
-      - 'dev-*'  #dev-new dev-branch
-      - 'feat/**'  #feat/new feat/new/branch
+      - dev   #dev-new dev-branch
+    paths:
+      - '.github/workflows/**'
 jobs:
   deploy:
     runs-on: ubuntu-latest
