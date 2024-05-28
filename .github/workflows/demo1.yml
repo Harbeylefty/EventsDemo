@@ -9,7 +9,7 @@ on:
   push:
     branches: 
       - dev   #dev-new dev-branch
-    paths:
+    paths-ignore:
       - '.github/workflows/**'
 jobs:
   deploy:
