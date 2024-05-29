@@ -9,7 +9,7 @@ on:
   push:
     branches: 
       - master
-    paths-ignore:
+    paths:
       - '.github/workflows/**'  #ignore changes in the .github folder
 jobs:
   deploy:
