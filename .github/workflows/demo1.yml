@@ -3,7 +3,14 @@ on:
   pull_request:
     types:
       - opened
+    branches:
+      - master   
   workflow_dispatch:
+  push:
+    branches: 
+      - master
+    paths-ignore:
+      - '.github/workflows/**'  #ignore changes in the .github folder
 jobs:
   deploy:
     runs-on: ubuntu-latest
