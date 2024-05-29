@@ -2,15 +2,15 @@ name: Events Demo 1
 on: 
   pull_request:
     types:
-      - opened
+      - closed
     branches:
-      - dev   #dev-new dev-branch
+      - dev   
   workflow_dispatch:
   push:
     branches: 
-      - dev   #dev-new dev-branch
-    paths-ignore:
-      - '.github/workflows/**'
+      - master
+    paths:
+      - '.github/workflows/**'  #ignore changes in the .github folder
 jobs:
   deploy:
     runs-on: ubuntu-latest
